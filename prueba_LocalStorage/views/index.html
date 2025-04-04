@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1> Iniciar Sesión: </h1>
+    <input type="text" id="username" placeholder="Ingesa tu usuario">
+    <button onclick="saveData()"> Guardar </button>
+    <button onclick="loadData()"> Cargar </button>
+
+    <script> 
+        function saveData(){
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+            alert('Datos Guardados con EXITO!!');
+        }
+
+        function loadData(){
+            const username = localStorage.getItem('username');
+            alert(username || 'No hay datos guardados');
+        }
+
+
+    </script>
+</body>
+</html>
